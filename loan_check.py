@@ -10,28 +10,26 @@ def book_check():
         isbn = input("Please enter the isbn of the book you want to loan: ")
         if isbn:
             book_found = book_search(isbn)
-            print("book found")
-            print(book_found)
             if book_found:
                 loop = 'no'
                 print("Book check: Book found: ")
                 loan_check(book_found)
-
+            else:
+                print("Book not found")
 
 def loan_check(book_found):
 
     isbn = book_found
+    loaned_tup = loan_search(isbn)
+    loaned = loaned_tup[0]
+    due_date = loaned_tup[1]
 
-    result_dict = loan_search(isbn)
-    print("result dict")
-    print(result_dict)
-
-    if result_dict is None or result_dict['loaned'] == 0:
+    if loaned is None or loaned == 0:
 
         print("You can loan this book")
         loan_request(isbn)
     else:
-        print("""This book is out on loan, due to be returned {}""".format(result_dict['due_date']))
+        print("""This book is out on loan, due to be returned {}""".format(due_date))
 
 
 if __name__ == '__main__':

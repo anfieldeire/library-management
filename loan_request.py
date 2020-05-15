@@ -15,6 +15,7 @@ def loan_request(isbn):
                     (?, ?, ?, ?, ? )""", (library_id, 1, loan_date, isbn, due_date ))
 
         conn.commit()
+        print(c.lastrowid)
     return c.lastrowid
 
 
