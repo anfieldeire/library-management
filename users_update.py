@@ -52,7 +52,7 @@ def update_user():
             updates = updates.replace("'", '').replace(":", '=').replace(":", '=').replace("{", '').replace("}", '')
             sql_first = 'UPDATE users SET'
             sql_middle = updates
-            sql_last = 'WHERE library_id=?'
+            sql_last = 'WHERE user_id=?'
             sql_first_half = '{} {} {}'.format(sql_first, sql_middle, sql_last)
             c.execute(sql_first_half, sql_tup)
             conn.commit()
@@ -60,4 +60,7 @@ def update_user():
                 print("SQL user record update failed")
             else:
                 print("User record updated")
-update_user()
+
+
+if __name__ == '__main__':
+    update_user()

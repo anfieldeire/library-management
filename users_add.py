@@ -25,4 +25,7 @@ def add_user():
                                         conn.commit()
                                         print("New library user has been added. library id: {} ".format(c.lastrowid))
                                     return c.lastrowid
-add_user()
+
+
+if __name__ == '__main__':
+    add_user()
