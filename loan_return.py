@@ -19,4 +19,6 @@ def loan_return():
         if c.rowcount > 0:
             print("Book returned, isbn {}".format(isbn))
 
-loan_return()
+
+if __name__ == '__main__':
+    loan_return()
