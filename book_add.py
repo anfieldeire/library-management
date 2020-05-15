@@ -29,10 +29,8 @@ def book_add():
                                 loop = 'no'
                                 return
                             else:
-                                print("make connection")
                                 loop = 'no'
                                 with conn:
-                                    print("insert")
                                     c.execute("INSERT into books (name, author, category) VALUES (?,?,?)",
                                        (name, author, category))
 
