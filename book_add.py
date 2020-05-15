@@ -9,7 +9,7 @@ def book_add():
                  "exit the program. Press enter to continue: ")
     loop = 'yes'
     while True and loop == 'yes':
-        print("restarts")
+
         name = input("Please enter the book title: ")
         if name == 'exit':
             break
@@ -40,4 +40,6 @@ def book_add():
                                     print("New book has been added. isbn is: {} ".format(c.lastrowid))
                                 return c.lastrowid
 
-book_add()
+
+if __name__ == '__main__':
+    book_add()
