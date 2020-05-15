@@ -3,11 +3,12 @@ from loan_check import book_check
 from loan_return import loan_return
 from users_add import add_user
 from users_update import update_user
+from book_add import book_add
 
 
 def selection_validate():
 
-    valid_selections = ('1', '2', '3', '4')
+    valid_selections = ('1', '2', '3', '4', '5')
     message = input("Welcome to the main menu. Press enter to continue: ")
     loop = 'yes'
     while True and loop == 'yes':
@@ -17,7 +18,8 @@ def selection_validate():
                           "To return a book enter 2 \n"
                           "To add a user enter 3 \n"
                           "To update a user enter 4 \n"
-                          "Enter choice: ")
+                          "To add a book enter 5 \n"
+                          "\nEnter choice: ")
         if selection == 'exit':
             break
         else:
@@ -40,15 +42,17 @@ def selection_calls():
     if selection == '1':
         book_check()
 
-    elif selection == 2:
+    elif selection == '2':
         loan_return()
 
-    elif selection == 3:
+    elif selection == '3':
         add_user()
 
     elif selection == '4':
-        print("update user")
         update_user()
+
+    elif selection == '5':
+        book_add()
 
 
 if __name__ == '__main__':
