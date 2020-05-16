@@ -2,10 +2,10 @@
 Library management system in python using sqlite
 
 ## Pre-requisites
-
-## Install the following modules
+- Tested on python 3.6
 
 ## Installation Instructions
+- In python windows virtual environment, navigate to your scripts directory and run: pip install requirements.txt
 
 ## Running the Program
 - Run the program and select a value from the menu
