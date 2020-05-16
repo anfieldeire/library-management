@@ -9,7 +9,7 @@ from book_add import book_add
 
 def selection_validate():
 
-    valid_selections = ('1', '2', '3', '4', '5')
+    valid_selections = ('1', '2', '3', '4', '5', '6')
     message = input("Welcome to the main menu. Press enter to continue: ")
     loop = 'yes'
     while True and loop == 'yes':
@@ -20,7 +20,7 @@ def selection_validate():
                           "To extend a loan enter 3 \n"
                           "To add a user enter 4 \n"
                           "To update a user enter 5 \n"
-                          "To add a book enter 5 \n"
+                          "To add a book enter 6 \n"
                           "\nEnter choice: ")
         if selection == 'exit':
             break
