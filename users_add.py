@@ -5,7 +5,6 @@ c = conn.cursor()
 
 def add_user():
 
-    user_inputs = ['first_name', 'last_name', 'social', 'email']
     while True:
         first_name = input("Please enter the first name: ")
         if first_name:

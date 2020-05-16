@@ -26,7 +26,6 @@ def selection_validate():
             break
         else:
             if selection in valid_selections:
-                print("{}".format(selection))
                 loop = 'no'
 
             else:
@@ -38,8 +37,6 @@ def selection_validate():
 def selection_calls():
 
     selection = selection_validate()
-
-    print("Selection made was: {} ".format(selection))
 
     if selection == '1':
         book_check()
